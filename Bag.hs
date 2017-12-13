@@ -1,3 +1,5 @@
+module Bag(insert, remove, search, union, intersection, minus, inclusion, summy, size) where
+
 import qualified Data.List as List
 
 {-
