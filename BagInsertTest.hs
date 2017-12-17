@@ -1,3 +1,5 @@
+module BagInsertTest(tests_insert) where
+
 import Test.HUnit
 import Bag
 

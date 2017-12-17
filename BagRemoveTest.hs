@@ -1,3 +1,5 @@
+module BagRemoveTest(tests_remove) where
+
 import Test.HUnit
 import Bag
 
