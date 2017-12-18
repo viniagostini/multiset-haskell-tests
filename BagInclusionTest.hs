@@ -37,5 +37,5 @@ test_inclusion_8 =  "Test if Bag A is included on Bag B when A has less of the s
 
 tests_inclusion = TestList[
                 test_inclusion_1, test_inclusion_2, test_inclusion_3,
-                test_inclusion_4, test_inclusion_5, test_inclusion_5,
+                test_inclusion_4, test_inclusion_5, test_inclusion_6,
                 test_inclusion_7, test_inclusion_8]
