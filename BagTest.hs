@@ -6,5 +6,6 @@ import BagInsertTest(tests_insert)
 import BagRemoveTest(tests_remove)
 import BagSearchTest(tests_search)
 import BagUnionTest(tests_union)
+import BagInclusionTest(tests_inclusion)
 
-tests = TestList[tests_insert, tests_remove, tests_search, tests_union]
+tests = TestList[tests_insert, tests_remove, tests_search, tests_union, tests_inclusion]
