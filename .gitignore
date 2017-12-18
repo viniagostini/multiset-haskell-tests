@@ -22,3 +22,5 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+# Generated .json file
+test-output.json
