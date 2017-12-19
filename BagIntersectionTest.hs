@@ -30,7 +30,7 @@ test_intersection_6 = "Test get intersection between Bag A and Bag B where B is 
 
 test_intersection_7 = "Test get intersection between Bag A and Bag B where A is a subset of B" ~:
                       "Get intersection between Bag A and Bag B where A is a subset of B should return A"  ~:
-                      (intersection [(2, 1), (1, 1)] [(2, 1)]) ~?= [(2, 1)]
+                      (intersection [(2, 1)] [(2, 1), (1, 1)]) ~?= [(2, 1)]
 
 test_intersection_8 = "Test get intersection between Bag A and Bag B where A has the element (2, 2) and B has the element (2, 1)" ~:
                       "Get intersection between Bag A and Bag B should return [(2, 1)]"  ~:
