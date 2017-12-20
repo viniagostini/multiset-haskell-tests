@@ -6,7 +6,7 @@ import Bag
 
 test_minus_1 = "Test get minus between a no-empty Bag A and an empty Bag B" ~:
                       "Get minus between a no-empty Bag A and an empty Bag B should return Bag A"  ~:
-                      (minus [(2, 1)] []) ~?= [(2,1)]
+                      (minus [(2, 1)] []) ~?= [(2, 1)]
 
 test_minus_2 = "Test get minus between an empty Bag A and a no-empty Bag B" ~:
                       "Get minus between an empty A and a no-empty Bag B should return []"  ~:
@@ -14,15 +14,15 @@ test_minus_2 = "Test get minus between an empty Bag A and a no-empty Bag B" ~:
 
 test_minus_3 = "Test get minus between Bag A and Bag A" ~:
                       "Get minus between Bag A and Bag A should return []"  ~:
-                      List.sort (minus [(2, 1), (1, 1)] [(2, 1), (1, 1)]) ~?= []
+                      minus [(2, 1), (1, 1)] [(2, 1), (1, 1)] ~?= []
 
 test_minus_4 = "Test get minus between Bag A and Bag A" ~:
-                      "Get minus between Bag A and Bag A should return itself"  ~:
-                      List.sort (minus [(1, 1), (2, 1)] [(2, 1), (1, 1)]) ~?= []
+                      "Get minus between Bag A and Bag A should return []"  ~:
+                      minus [(1, 1), (2, 1)] [(2, 1), (1, 1)] ~?= []
 
 test_minus_5 = "Test get minus between Bags A and B with no intersection" ~:
                       "Get minus between Bags with no intersection should return Bag A"  ~:
-                      (minus [(2, 1)] [(1, 2)]) ~?= [(2,1)]
+                      (minus [(2, 1)] [(1, 2)]) ~?= [(2, 1)]
 
 test_minus_6 = "Test get minus between Bag A and Bag B where B is a subset of A" ~:
                       "Get minus between Bag A and Bag B where B is a subset of A should return A with no elements in B."  ~:
