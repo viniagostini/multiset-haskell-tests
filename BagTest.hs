@@ -10,8 +10,9 @@ import BagIntersectionTest(tests_intersection)
 import BagInclusionTest(tests_inclusion)
 import BagSummyTest(tests_summy)
 import BagSizeTest(tests_size)
+import BagMinusTest(tests_minus)
 
 tests = TestList[
     tests_insert, tests_remove, tests_search,
     tests_union, tests_intersection, tests_inclusion,
-    tests_summy, tests_size]
+    tests_summy, tests_size, tests_minus]
