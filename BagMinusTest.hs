@@ -30,7 +30,7 @@ test_minus_6 = "Test get minus between Bag A and Bag B where B is a subset of A"
 
 test_minus_7 = "Test get minus between Bag A and Bag B where A is a subset of B" ~:
                       "Get minus between Bag A and Bag B where A is a subset of B should return []"  ~:
-                      (minus [(2, 1)] [(2, 1),(1, 1)]) ~?= []
+                      (minus [(2, 1)] [(2, 1), (1, 1)]) ~?= []
 
 test_minus_8 = "Test get minus between Bag A and Bag B where A has the element (2, 3) and B has the element (2, 1)" ~:
                       "Get minus between Bag A and Bag B should return [(2, 2)]"  ~:
