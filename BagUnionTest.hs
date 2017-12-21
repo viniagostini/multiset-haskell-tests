@@ -10,31 +10,31 @@ import qualified Data.List as List
 --test_union_1 = TestCase (assertEqual "The union between two empty bags should be an empty bag" ( union [] [] ) ([]) )
 
 test_union_2 = TestCase (assertEqual "[Type: Char] The union between an bag A and an empty bag B should be equal to the bag A"
-    ( union [('A', 1), ('B', 1)] [] ) ( [('A', 1), ('B', 1)] ) )
+    (List.sort $ union [('A', 1), ('B', 1)] [] ) (List.sort [('A', 1), ('B', 1)]) )
 
 test_union_3 = TestCase (assertEqual "[Type: Number] The union between an bag A and an empty bag B should be equal to the bag A"
-    ( union [(1, 1), (2, 1)] [] ) ( [(1, 1), (2, 1)] ) )
+    (List.sort $ union [(1, 1), (2, 1)] [] ) (List.sort [(1, 1), (2, 1)]) )
 
 test_union_4 = TestCase (assertEqual "[Type: String] The union between an bag A and an empty bag B should be equal to the bag A"
-    ( union [("ab", 1), ("cd", 1)] [] ) ( [("ab", 1), ("cd", 1)] ) )
+    (List.sort $ union [("ab", 1), ("cd", 1)] [] ) (List.sort [("ab", 1), ("cd", 1)]) )
 
 test_union_5 = TestCase (assertEqual "[Type: Char] The union between an empty bag A and an bag B should be equal to the bag B"
-    ( union [] [('A', 1), ('B', 1)]  ) ([('A', 1), ('B', 1)]) )
+    (List.sort $ union [] [('A', 1), ('B', 1)]  ) (List.sort [('A', 1), ('B', 1)]) )
 
 test_union_6 = TestCase (assertEqual "[Type: Number] The union between an empty bag A and an bag B should be equal to the bag B"
-    ( union [] [(1, 1), (2, 1)]  ) ([(1, 1), (2, 1)]) )
+    (List.sort $ union [] [(1, 1), (2, 1)]  ) (List.sort [(1, 1), (2, 1)]) )
 
 test_union_7 = TestCase (assertEqual "[Type: String] The union between an empty bag A and an bag B should be equal to the bag B"
-    ( union [] [("ab", 1), ("cd", 1)]  ) ([("ab", 1), ("cd", 1)]) )
+    (List.sort $ union [] [("ab", 1), ("cd", 1)]  ) (List.sort [("ab", 1), ("cd", 1)]) )
 
 test_union_8 = TestCase (assertEqual "[Type: Char] The union between bags with diferent elements should have the elements of both"
-    ( union [('A', 1)] [('B', 1)]  ) ([('A', 1), ('B', 1)]) )
+    (List.sort $ union [('A', 1)] [('B', 1)]  ) (List.sort [('A', 1), ('B', 1)]) )
 
 test_union_9 = TestCase (assertEqual "[Type: Number] The union between bags with diferent elements should have the elements of both"
-    ( union [(1, 1)] [(2, 1)] ) ([(1, 1), (2, 1)]) )
+    (List.sort $ union [(1, 1)] [(2, 1)] ) (List.sort [(1, 1), (2, 1)]) )
 
 test_union_10 = TestCase (assertEqual "[Type: String] The union between bags with diferent elements should have the elements of both"
-    ( union [("string1", 1)] [("string2", 1)]  ) ([("string1", 1), ("string2", 1)]) )
+    (List.sort $ union [("string1", 1)] [("string2", 1)]  ) (List.sort [("string1", 1), ("string2", 1)]) )
 
 test_union_11 = TestCase (assertEqual "[Type: Char] The union between bags with the same elements should have the max number of elements"
     (List.sort $ union [('A', 1), ('B', 2)] [('A', 2), ('B', 1)]  ) (List.sort [('A', 2), ('B', 2)]) )
